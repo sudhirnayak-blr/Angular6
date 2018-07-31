@@ -10,4 +10,5 @@ export class ProductModel{
         this.unitPrice = price; 
         this.unitsInStock = stock;
     }
+
 }

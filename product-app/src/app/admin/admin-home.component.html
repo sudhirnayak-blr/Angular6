@@ -1,5 +1,24 @@
-<p>
-  admin-home works!
-</p>
-<app-add-product></app-add-product>
-<app-del-product></app-del-product>
+<h4>Welcome to Administrator Home Page</h4>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card text-white bg-danger mb-3">
+            <h3 class="card-header">Manage Products</h3>
+            <div class="card-body">
+                <p class="card-text">
+                Use this section to manage the products. You can add, update and remove products using this section. 
+                Click <a [routerLink]="['./products']" class="btn btn-dark">here</a> to perform these tasks.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card text-white bg-warning mb-3">
+            <h3 class="card-header">Manage Categories</h3>
+            <div class="card-body">
+                Use this section to manage the categories. You can add, update and remove categories using this section. 
+                Click <a [routerLink]="['./categories']" class="btn btn-dark">here</a> to perform these tasks.
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,5 +16,11 @@ export class ProductService {
     let obs : Observable<ProductModel[]> = this.http.get<ProductModel[]>(this.url); 
     return obs;
   }
+  getDetails(id) {
+    let getUrl = this.url + "/" + id; 
+    console.log(getUrl);
+    let obs: Observable<ProductModel> = this.http.get<ProductModel>(getUrl);
+    return obs;
+  }
 
 }

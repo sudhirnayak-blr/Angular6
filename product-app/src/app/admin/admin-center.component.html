@@ -1,0 +1,12 @@
+<h2>Admin Center</h2>
+<div *ngIf="authService.isLoggedIn" class="text-primary text-right">
+    Welcome {{authService.model.userName}}
+    <button class="btn btn-dark mb-2" (click)="logout()">Logout</button>
+</div>
+<nav class="nav nav-pills nav-fill justify-content-center">
+    <a routerLink="./" routerLinkActive="active" class="nav-item nav-link"
+        [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+    <a routerLink="./products" routerLinkActive="active" class="nav-item nav-link">Manage Products</a>
+    <a routerLink="./categories" routerLinkActive="active" class="nav-item nav-link">Manage Categories</a>
+</nav>
+<router-outlet></router-outlet>
